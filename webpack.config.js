@@ -8,7 +8,7 @@ module.exports = {
     entry: "./src/entry.js",
     mode: "development",
     devServer: {
-        port: 3003, 
+        port: 3001, 
     },
     module: {
         rules: [
@@ -38,7 +38,7 @@ module.exports = {
             name: "HeaderApp",  // This application named 'HeaderApp'
             filename: "remoteEntry.js",  // output a js file
             exposes: { // which exposes
-                "./Auth": "./src/App",  // a module 'Header' from './src/App'
+                "./Header": "./src/App",  // a module 'Header' from './src/App'
             },
             remotes: {
                 HomeApp: 'HomeApp@http://localhost:3000/remoteEntry.js',
