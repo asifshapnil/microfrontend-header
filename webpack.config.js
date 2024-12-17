@@ -34,8 +34,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./public/index.html",
         }),
-        new ModuleFederationPlugin({
-            name: "AuthApp",  // This application named 'AuthApp'
+        new ModuleFederationPlugin({ 
+            name: "HeaderApp",  // This application named 'HeaderApp'
             filename: "remoteEntry.js",  // output a js file
             exposes: { // which exposes
                 "./Auth": "./src/App",  // a module 'Header' from './src/App'

@@ -1,5 +1,5 @@
 {
-  "name": "auth-app",
+  "name": "header-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
