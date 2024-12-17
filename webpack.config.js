@@ -1,9 +1,5 @@
-//home-app/webpack.config.js
-// header-app/webpack.config.js
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// import ModuleFederationPlugin from webpack
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-// import dependencies from package.json, which includes react and react-dom
 const { dependencies } = require("./package.json");
 const path = require('path');
 
@@ -12,7 +8,7 @@ module.exports = {
     entry: "./src/entry.js",
     mode: "development",
     devServer: {
-        port: 3001,  // port 3001 for header-app
+        port: 3003, 
     },
     module: {
         rules: [
@@ -39,10 +35,10 @@ module.exports = {
             template: "./public/index.html",
         }),
         new ModuleFederationPlugin({
-            name: "HeaderApp",  // This application named 'HeaderApp'
+            name: "AuthApp",  // This application named 'AuthApp'
             filename: "remoteEntry.js",  // output a js file
             exposes: { // which exposes
-                "./Header": "./src/App",  // a module 'Header' from './src/App'
+                "./Auth": "./src/App",  // a module 'Header' from './src/App'
             },
             remotes: {
                 HomeApp: 'HomeApp@http://localhost:3000/remoteEntry.js',

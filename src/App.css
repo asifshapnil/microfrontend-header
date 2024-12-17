@@ -13,6 +13,15 @@
   }
 }
 
+.btn {
+  background-color: teal;
+  color: #fff;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+  background-color: rgb(42, 159, 159) !important;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
