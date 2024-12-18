@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; // Must be imported for webpack to work
+import React, { useState, useEffect } from 'react'; 
 import { FaUserCircle } from 'react-icons/fa';
 import './App.css';
 import { useStore } from 'HomeApp/store';
@@ -8,7 +8,7 @@ function App() {
   const { state } = useStore();
 
   if (!useStore) {
-    return <div>Loading store...</div>; // Or some other loading indicator
+    return <div>Loading store...</div>; 
   }
 
   console.log(state.isAuthenticated);

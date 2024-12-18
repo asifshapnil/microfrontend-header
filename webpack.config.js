@@ -35,21 +35,21 @@ module.exports = {
             template: "./public/index.html",
         }),
         new ModuleFederationPlugin({ 
-            name: "HeaderApp",  // This application named 'HeaderApp'
-            filename: "remoteEntry.js",  // output a js file
-            exposes: { // which exposes
-                "./Header": "./src/App",  // a module 'Header' from './src/App'
+            name: "HeaderApp",  
+            filename: "remoteEntry.js",  
+            exposes: { 
+                "./Header": "./src/App", 
             },
             remotes: {
                 HomeApp: 'HomeApp@http://localhost:3000/remoteEntry.js',
             },
-            shared: {  // and shared
-                ...dependencies,  // some other dependencies
-                react: { // react
+            shared: {  
+                ...dependencies,  
+                react: { 
                     singleton: true,
                     requiredVersion: dependencies["react"],
                 },
-                "react-dom": { // react-dom
+                "react-dom": { 
                     singleton: true,
                     requiredVersion: dependencies["react-dom"],
                 },
