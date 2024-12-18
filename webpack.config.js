@@ -41,7 +41,7 @@ module.exports = {
                 "./Header": "./src/App", 
             },
             remotes: {
-                HomeApp: 'HomeApp@http://localhost:3000/remoteEntry.js',
+                HomeApp: 'HomeApp@https://microfrontend-home-two.vercel.app/remoteEntry.js',
             },
             shared: {  
                 ...dependencies,  
